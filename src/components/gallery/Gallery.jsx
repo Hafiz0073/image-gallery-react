@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import SingleImage from '../singleImage/SingleImage';
 import './Gallery.css'
 
@@ -16,6 +17,7 @@ const Gallery = () => {
         const updatedImages = images.filter(image => !selectedImages.includes(image.id));
         setImages(updatedImages);
         setSelectedImages([]); // Clear the selected images array
+        toast.success("Successfully Deleted", { position: "top-center" });
     };
 
     return (
@@ -40,6 +42,7 @@ const Gallery = () => {
                     image={image}
                 ></SingleImage>)}
             </div>
+            <ToastContainer />
         </div>
     );
 };
