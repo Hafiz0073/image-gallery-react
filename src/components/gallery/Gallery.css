@@ -16,3 +16,38 @@
     grid-column:1/2 span;
     grid-row:1/2 span;
   }
+  //responsive
+
+  @media (max-width: 500px) {
+    .image-container  {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-content: space-around;
+    }
+  }
+  
+  @media (min-width: 500px) {
+    .image-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-content: space-around;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .image-container  {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-content: space-around;
+    }
+  }
+  @media (min-width: 900px) {
+    .image-container  {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-content: space-around;
+    }
+  }
+  
+ 
+   
